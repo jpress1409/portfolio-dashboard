@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const projects = [
   {
     label: 'Pokemon Damage Calculator',
-    url: null,
+    url:"https://pokemon-damage-calc.onrender.com/",
     icon: '⚡',
   },
   {
