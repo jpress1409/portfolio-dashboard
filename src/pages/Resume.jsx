@@ -58,11 +58,21 @@ const resumeData = {
 }
 
 export default function Resume() {
+  const handlePrint = () => {
+    window.print()
+  }
+
   return (
     <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-10">
+        <div className="mb-10 flex items-center justify-between no-print">
           <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Dashboard</Link>
+          <button
+            onClick={handlePrint}
+            className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-medium transition-colors text-sm"
+          >
+            Export as PDF
+          </button>
         </div>
 
         <div className="mb-12">

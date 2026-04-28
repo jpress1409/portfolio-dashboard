@@ -14,3 +14,18 @@ body {
   color: #f1f5f9;
   min-height: 100vh;
 }
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+}
