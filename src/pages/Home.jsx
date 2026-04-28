@@ -21,8 +21,8 @@ const tiles = [
     icon: '📊',
   },
   {
-    to: '/personal-info',
-    label: 'Personal Info',
+    to: '/contact',
+    label: 'Contact',
     description: 'Get in touch with me',
     color: 'from-emerald-600 to-emerald-900',
     border: 'border-emerald-500/30',
