@@ -6,37 +6,33 @@ const tiles = [
     to: '/personal-interests',
     label: 'Personal Interests',
     description: 'Personal projects made for fun',
-    color: 'from-violet-600 to-violet-900',
-    border: 'border-violet-500/30',
-    hover: 'hover:border-violet-400/70 hover:shadow-violet-500/20',
-    icon: '🎨',
+    color: 'from-slate-700 to-slate-900',
+    border: 'border-slate-600/30',
+    hover: 'hover:border-slate-500/70 hover:shadow-slate-500/20',
   },
   {
     to: '/math-data',
     label: 'Math & Data',
     description: 'Calculators, converters & business tools',
-    color: 'from-sky-600 to-sky-900',
-    border: 'border-sky-500/30',
-    hover: 'hover:border-sky-400/70 hover:shadow-sky-500/20',
-    icon: '📊',
+    color: 'from-indigo-700 to-indigo-900',
+    border: 'border-indigo-600/30',
+    hover: 'hover:border-indigo-500/70 hover:shadow-indigo-500/20',
   },
   {
     to: '/contact',
     label: 'Contact',
     description: 'Get in touch with me',
-    color: 'from-emerald-600 to-emerald-900',
-    border: 'border-emerald-500/30',
-    hover: 'hover:border-emerald-400/70 hover:shadow-emerald-500/20',
-    icon: '✉️',
+    color: 'from-teal-700 to-teal-900',
+    border: 'border-teal-600/30',
+    hover: 'hover:border-teal-500/70 hover:shadow-teal-500/20',
   },
   {
     to: '/resume',
     label: 'Resume',
     description: 'My experience & skills',
-    color: 'from-amber-600 to-amber-900',
-    border: 'border-amber-500/30',
-    hover: 'hover:border-amber-400/70 hover:shadow-amber-500/20',
-    icon: '📄',
+    color: 'from-zinc-700 to-zinc-900',
+    border: 'border-zinc-600/30',
+    hover: 'hover:border-zinc-500/70 hover:shadow-zinc-500/20',
   },
 ]
 
@@ -73,7 +69,6 @@ export default function Home() {
               hover:-translate-y-1
             `}
           >
-            <span className="text-4xl mb-4 select-none">{tile.icon}</span>
             <span className="text-2xl font-bold text-white leading-tight">{tile.label}</span>
             <span className="text-sm text-white/60 mt-1">{tile.description}</span>
           </Link>
