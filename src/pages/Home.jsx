@@ -76,6 +76,11 @@ export default function Home() {
 
     const interval = setInterval(draw, 50)
 
+    // Stop animation after 3 seconds
+    const timeout = setTimeout(() => {
+      clearInterval(interval)
+    }, 3000)
+
     const handleResize = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -85,6 +90,7 @@ export default function Home() {
 
     return () => {
       clearInterval(interval)
+      clearTimeout(timeout)
       window.removeEventListener('resize', handleResize)
     }
   }, [])
