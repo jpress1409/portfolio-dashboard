@@ -9,7 +9,7 @@ const projects = [
   },
   {
     label: 'NFL Stat Tracker',
-    url: null,
+    url: "https://nfl-stat-tracker-se89.onrender.com/",
     icon: '🏈',
   },
 ]

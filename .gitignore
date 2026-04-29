@@ -4,3 +4,6 @@ dist
 .env.local
 docs/
 docs/**
+errors/
+errors/**
+TODO.md
