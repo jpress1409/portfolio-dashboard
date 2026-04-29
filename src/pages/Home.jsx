@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const tiles = [
@@ -37,8 +37,65 @@ const tiles = [
 ]
 
 export default function Home() {
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン'
+    const fontSize = 14
+    const columns = canvas.width / fontSize
+    const drops = []
+
+    for (let i = 0; i < columns; i++) {
+      drops[i] = Math.random() * -100
+    }
+
+    const draw = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+      ctx.fillStyle = '#0f0'
+      ctx.font = fontSize + 'px monospace'
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)]
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize)
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0
+        }
+        drops[i]++
+      }
+    }
+
+    const interval = setInterval(draw, 50)
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative">
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 z-0"
+        style={{ background: '#000' }}
+      />
       <div className="absolute top-6 right-8">
         <a
           href="https://github.com/jpress1409/portfolio-dashboard"
@@ -51,8 +108,9 @@ export default function Home() {
           </svg>
         </a>
       </div>
-      <h1 className="text-5xl font-extrabold tracking-tight mb-2 text-white">Portfolio</h1>
-      <p className="text-slate-400 mb-14 text-lg">Select a section to explore</p>
+      <div className="relative z-10">
+        <h1 className="text-5xl font-extrabold tracking-tight mb-2 text-white">Portfolio</h1>
+        <p className="text-slate-400 mb-14 text-lg">Select a section to explore</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
         {tiles.map((tile) => (
@@ -73,6 +131,7 @@ export default function Home() {
             <span className="text-sm text-white/60 mt-1">{tile.description}</span>
           </Link>
         ))}
+        </div>
       </div>
     </div>
   )
