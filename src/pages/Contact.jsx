@@ -25,10 +25,9 @@ export default function Contact() {
             <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Dashboard</Link>
           </div>
 
-          <div className="bg-emerald-900/30 border border-emerald-500/30 rounded-xl p-8">
-            <div className="text-5xl mb-4">✅</div>
-            <h1 className="text-3xl font-bold text-emerald-400 mb-2">Message Sent!</h1>
-            <p className="text-slate-300">Thanks for reaching out. I'll get back to you soon.</p>
+          <div className="bg-slate-800/50 border border-slate-600/30 rounded-xl p-8">
+            <h1 className="text-3xl font-bold text-slate-300 mb-2">Message Sent!</h1>
+            <p className="text-slate-400">Thanks for reaching out. I'll get back to you soon.</p>
           </div>
         </div>
       </div>
@@ -54,7 +53,7 @@ export default function Contact() {
           <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Dashboard</Link>
         </div>
 
-        <h1 className="text-4xl font-bold mb-2 text-emerald-400">Contact</h1>
+        <h1 className="text-4xl font-bold mb-2 text-slate-300">Contact</h1>
         <p className="text-slate-400 mb-8">Send me a message and I'll get back to you</p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -68,7 +67,7 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-colors"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500/50 focus:border-slate-500/50 transition-colors"
                 placeholder="Your name"
               />
               <ValidationError field="name" errors={state.errors} />
@@ -83,7 +82,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-colors"
+                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500/50 focus:border-slate-500/50 transition-colors"
                 placeholder="your@email.com"
               />
               <ValidationError field="email" errors={state.errors} />
@@ -114,7 +113,7 @@ export default function Contact() {
               name="message"
               required
               rows={6}
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-colors resize-none"
+              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-500/50 focus:border-slate-500/50 transition-colors resize-none"
               placeholder="Your message..."
             />
             <ValidationError field="message" errors={state.errors} />
@@ -123,7 +122,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="w-full px-6 py-3 bg-emerald-600 hover:bg-emerald-500 disabled:bg-emerald-700/50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+            className="w-full px-6 py-3 bg-slate-700 hover:bg-slate-600 disabled:bg-slate-800/50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
           >
             {state.submitting ? 'Sending...' : 'Send Message'}
           </button>
@@ -139,7 +138,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-slate-400 text-sm">
               You can also email me directly at{' '}
-              <a href="mailto:jpress1409@gmail.com" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+              <a href="mailto:jpress1409@gmail.com" className="text-slate-300 hover:text-white transition-colors">
                 jpress1409@gmail.com
               </a>
             </p>

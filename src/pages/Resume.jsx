@@ -81,7 +81,7 @@ export default function Resume() {
           <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Dashboard</Link>
           <button
             onClick={handlePrint}
-            className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-medium transition-colors text-sm"
+            className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-medium transition-colors text-sm"
           >
             Export as PDF
           </button>
@@ -89,29 +89,29 @@ export default function Resume() {
 
         <div className="mb-12">
           <h1 className="text-5xl font-bold text-white mb-2">{resumeData.name}</h1>
-          <h2 className="text-2xl text-amber-400 mb-2">{resumeData.title}</h2>
+          <h2 className="text-2xl text-slate-300 mb-2">{resumeData.title}</h2>
           <p className="text-slate-400">{resumeData.contact}</p>
         </div>
 
         <section className="mb-12">
-          <h3 className="text-xl font-bold text-amber-400 mb-4 uppercase tracking-wider">Professional Summary</h3>
+          <h3 className="text-xl font-bold text-slate-300 mb-4 uppercase tracking-wider">Professional Summary</h3>
           <p className="text-slate-300 leading-relaxed">{resumeData.summary}</p>
         </section>
 
         <section className="mb-12">
-          <h3 className="text-xl font-bold text-amber-400 mb-6 uppercase tracking-wider">Experience</h3>
+          <h3 className="text-xl font-bold text-slate-300 mb-6 uppercase tracking-wider">Experience</h3>
           <div className="space-y-8">
             {resumeData.experience.map((exp, idx) => (
-              <div key={idx} className="border-l-2 border-amber-500/30 pl-6">
+              <div key={idx} className="border-l-2 border-slate-600/30 pl-6">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
                   <h4 className="text-xl font-semibold text-white">{exp.role}</h4>
                   <span className="text-slate-400 text-sm">{exp.period}</span>
                 </div>
-                <p className="text-amber-400 font-medium mb-3">{exp.company}</p>
+                <p className="text-slate-400 font-medium mb-3">{exp.company}</p>
                 <ul className="space-y-2">
                   {exp.bullets.map((bullet, bIdx) => (
                     <li key={bIdx} className="text-slate-300 leading-relaxed pl-4 relative">
-                      <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                      <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-slate-400 rounded-full"></span>
                       {bullet}
                     </li>
                   ))}
@@ -122,11 +122,11 @@ export default function Resume() {
         </section>
 
         <section>
-          <h3 className="text-xl font-bold text-amber-400 mb-4 uppercase tracking-wider">Skills</h3>
+          <h3 className="text-xl font-bold text-slate-300 mb-4 uppercase tracking-wider">Skills</h3>
           <ul className="space-y-2">
             {resumeData.skills.map((skill, idx) => (
               <li key={idx} className="text-slate-300 leading-relaxed pl-4 relative">
-                <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
+                <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-slate-400 rounded-full"></span>
                 {skill}
               </li>
             ))}

@@ -16,7 +16,7 @@ export default function PersonalInfo() {
           </svg>
         </a>
       </div>
-      <h1 className="text-4xl font-bold mb-4 text-emerald-400">Personal Info</h1>
+      <h1 className="text-4xl font-bold mb-4 text-slate-300">Personal Info</h1>
       <p className="text-slate-400 mb-8">Contact & info coming soon...</p>
       <Link to="/" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Dashboard</Link>
     </div>
