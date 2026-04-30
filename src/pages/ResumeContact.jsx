@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import { Link } from 'react-router-dom'
+import InProgressBanner from '../components/InProgressBanner'
 
 const resumeData = {
   name: 'Joseph Pressley',
@@ -73,7 +74,8 @@ export default function ResumeContact() {
 
   if (state.succeeded) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center p-8">
+      <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-16">
+        <InProgressBanner />
         <div className="absolute top-6 right-8">
           <a
             href="https://github.com/jpress1409/portfolio-dashboard"
@@ -101,7 +103,8 @@ export default function ResumeContact() {
   }
 
   return (
-    <div className="min-h-screen p-8">
+    <div className="min-h-screen p-8 pt-16">
+      <InProgressBanner />
       <div className="absolute top-6 right-8 no-print">
         <a
           href="https://github.com/jpress1409/portfolio-dashboard"

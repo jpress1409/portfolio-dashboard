@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import InProgressBanner from '../components/InProgressBanner'
 
 export default function AIIntegrations() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-16">
+      <InProgressBanner />
       <div className="absolute top-6 right-8">
         <a
           href="https://github.com/jpress1409/portfolio-dashboard"

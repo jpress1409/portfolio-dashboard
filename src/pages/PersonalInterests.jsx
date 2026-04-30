@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import InProgressBanner from '../components/InProgressBanner'
 
 const projects = [
   {
@@ -14,7 +15,8 @@ const projects = [
 
 export default function PersonalInterests() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 pt-16">
+      <InProgressBanner />
       <div className="absolute top-6 right-8 flex gap-4">
         <a
           href="https://github.com/jpress1409/pokemon-damage-calc"

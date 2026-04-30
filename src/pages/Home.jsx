@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import InProgressBanner from '../components/InProgressBanner'
 
 const tiles = [
   {
@@ -107,7 +108,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative">
+    <div className="min-h-screen flex flex-col items-center justify-center p-8 relative pt-16">
+      <InProgressBanner />
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
