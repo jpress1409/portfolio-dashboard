@@ -51,6 +51,7 @@ export default function Home() {
     const fontSize = 14
     const columns = canvas.width / fontSize
     const drops = []
+    let isFinishing = false
 
     for (let i = 0; i < columns; i++) {
       drops[i] = Math.random() * -100
@@ -63,22 +64,32 @@ export default function Home() {
       ctx.fillStyle = '#0f0'
       ctx.font = fontSize + 'px monospace'
 
+      let allOffScreen = true
+
       for (let i = 0; i < drops.length; i++) {
+        if (drops[i] * fontSize < canvas.height) {
+          allOffScreen = false
+        }
+        
         const text = chars[Math.floor(Math.random() * chars.length)]
         ctx.fillText(text, i * fontSize, drops[i] * fontSize)
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        if (!isFinishing && drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0
         }
         drops[i]++
+      }
+
+      if (isFinishing && allOffScreen) {
+        clearInterval(interval)
       }
     }
 
     const interval = setInterval(draw, 50)
 
-    // Stop animation after 3 seconds
+    // Stop generating new characters after 3 seconds, let existing ones finish falling
     const timeout = setTimeout(() => {
-      clearInterval(interval)
+      isFinishing = true
     }, 3000)
 
     const handleResize = () => {
