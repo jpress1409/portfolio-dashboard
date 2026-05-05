@@ -11,6 +11,14 @@ const projects = [
     label: 'NFL Stat Tracker',
     url: "https://nfl-stat-tracker-se89.onrender.com/",
   },
+  {
+    label: 'AI Chess Trainer',
+    url: '/ai-chess-trainer',
+  },
+  {
+    label: 'Media Tracker',
+    url: '/media-tracker',
+  },
 ]
 
 export default function PersonalInterests() {
@@ -49,8 +57,8 @@ export default function PersonalInterests() {
           <a
             key={project.label}
             href={project.url ?? '#'}
-            target={project.url ? '_blank' : undefined}
-            rel="noopener noreferrer"
+            target={project.url && project.url.startsWith('http') ? '_blank' : undefined}
+            rel={project.url && project.url.startsWith('http') ? 'noopener noreferrer' : undefined}
             className={`
               flex items-center gap-4 px-6 py-4 rounded-xl border border-slate-600/30
               bg-slate-800/50 text-white font-semibold text-lg
