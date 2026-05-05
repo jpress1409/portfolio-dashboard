@@ -8,10 +8,6 @@ const projects = [
     url:"https://pokemon-damage-calc.onrender.com/",
   },
   {
-    label: 'NFL Stat Tracker',
-    url: "https://nfl-stat-tracker-se89.onrender.com/",
-  },
-  {
     label: 'AI Chess Trainer',
     url: '/ai-chess-trainer',
   },
