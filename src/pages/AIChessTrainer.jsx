@@ -22,11 +22,14 @@ export default function AIChessTrainer() {
       <p className="text-slate-400 mb-10">Train your chess skills with AI assistance</p>
 
       <div className="flex flex-col gap-4 w-full max-w-md mb-10">
-        <div
-          className="px-6 py-4 rounded-xl border border-slate-600/30 bg-slate-800/50 text-white font-semibold text-lg opacity-50 cursor-not-allowed"
+        <a
+          href="https://chess-tutor-sandy.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-4 rounded-xl border border-slate-600/30 bg-slate-800/50 text-white font-semibold text-lg hover:bg-slate-700/50 hover:border-slate-500/70 hover:shadow-lg hover:shadow-slate-500/20 cursor-pointer transition-all duration-200 text-center"
         >
-          Coming soon...
-        </div>
+          Play Chess Tutor
+        </a>
       </div>
 
       <Link to="/personal-interests" className="text-slate-400 hover:text-white transition-colors text-sm">&larr; Back to Personal Interests</Link>
