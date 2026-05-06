@@ -5,7 +5,7 @@ import InProgressBanner from '../components/InProgressBanner'
 const tiles = [
   {
     to: '/personal-interests',
-    label: 'Personal Interests',
+    label: 'Fun & Games',
     description: 'Personal projects made for fun',
     color: 'from-slate-700 to-slate-900',
     border: 'border-slate-600/30',

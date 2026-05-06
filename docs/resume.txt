@@ -1,0 +1,37 @@
+Joseph Pressley
+Security Analyst
+Pittsburgh, PA | jpress1409@gmail.com
+PROFESSIONAL SUMMARY
+Cybersecurity analyst with experience in AI security, governance, and risk assessment across model evaluation, enterprise AI onboarding, policy development, and prompt-based testing. Skilled in Python automation, agent-aware workflow support, executive-facing HTML/reporting, and self-service prompt injection evaluation.
+
+EXPERIENCE
+BNY | AI Security Engineer  July 2025 – April 2026
+
+•	Supported risk assessment activities during onboarding of Enterprise ChatGPT by identifying security considerations, reviewing proposed usage patterns, and helping stakeholders make more informed adoption decisions with clearer understanding of residual risk and required controls.
+•	Evaluated Skild.AI for the Eliza Robotics initiative from a security perspective by reviewing risks related to model behavior, system usage, and control expectations, helping inform whether the platform was appropriate for enterprise use and what safeguards would be needed before adoption.
+•	Authored enterprise AI Security Policy and supported development of an AI Risk Assessment Methodology to improve consistency in evaluating AI use cases and control expectations.
+•	Led work around AI security findings into reporting materials tailored for executive audiences, including clear summaries of key risks, implications, and recommended next steps to improve decision-making and visibility.
+•	Contributed to initiatives involving agent-based capabilities and workflow integration, including familiarity with how agents can be incorporated into business processes to automate actions, support self-service experiences, and improve control-aware adoption of AI tools.
+•	Assessed 250+ AI initiatives for security and governance readiness, identifying critical gaps in risk management, data handling, and control design.
+•	Developed MVP for prompt exploit testing application integrating Garak, PyRIT, and other tools, preventing multimillion-dollar commercial solution purchase.
+BNY | Cybersecurity Intern  Jan 2025 – July 2025
+•	Built a Python-based testing script that automatically ran more than 20,000 prompts across Azure Content Safety, Calypso AI, and Protect AI proof-of-concepts, then parsed and structured results for comparative analysis of detection quality, control coverage, and operational gaps.
+•	Automated collection and parsing of large prompt-test outputs into usable result sets, reducing manual review effort and making it easier for stakeholders to identify trends, compare vendor performance, and determine which solutions were most viable for BNY use cases.
+•	Began development of an initiative to identify gaps in AI-related policies, helping surface where existing governance materials did not fully address emerging AI risks and creating a foundation for stronger policy coverage.
+•	Supported development of self-service tooling related to prompt injection testing, helping enable more repeatable evaluation of model resilience and improving the organization's ability to assess AI security issues earlier in the workflow.
+•	Contributed to work involving AI agents and workflow integration by exploring how AI capabilities could be embedded into practical processes while maintaining attention to security, usability, and governance considerations.
+Chick-fil-A McKnight Rd | Supervisor  Oct 2017 – Jan 2025
+•	Led operations, trained staff, and strengthened communication, teamwork, adaptability, and accountability in a high-volume environment.
+•	Managed service quality and inventory support while mentoring new team members and improving day-to-day execution.
+
+Year Up | Professional Training Program
+•	Developed professional communication, presentation, teamwork, and problem-solving skills for cross-functional environments.
+
+EDUCATION
+Western Governors University | BS in Software Development  Expected Graduation: 2030
+
+SKILLS
+•	Python, Java, SQL | Flask, REST APIs, JSON-based pipelines
+•	AI threat modeling, control coverage analysis, AI risk assessment, prompt injection testing
+•	Policy-to-system mapping, secure AI lifecycle, agent-based workflow concepts, executive HTML/reporting
+•	Secure SDLC, input validation, system hardening | Git, Microsoft Office Suite, Teams, Zoom
