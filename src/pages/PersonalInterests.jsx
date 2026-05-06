@@ -9,7 +9,7 @@ const projects = [
   },
   {
     label: 'AI Chess Trainer',
-    url: '/ai-chess-trainer',
+    url: 'https://chess-tutor-sandy.vercel.app',
   },
   {
     label: 'Media Tracker',
